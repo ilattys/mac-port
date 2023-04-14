@@ -1,0 +1,55 @@
+//main content
+main {
+  height: unset !important;
+
+  .wrap {
+    padding: 40px 20px;
+    height: 100vh !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    cursor: default;
+  }
+
+  @media (max-width: 1300px) {
+    .wrap {
+      background-position: left;
+    }
+    .shein-b {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 70vh;
+    }
+    .text-cl {
+      margin-bottom: 0;
+    }
+  }
+  //background image resize
+  @media (max-height: 813px) {
+    .wrap {
+      height: 100% !important;
+    }
+    .btn {
+      font-size: 1rem !important;
+    }
+  }
+  //center text
+  .text-cl {
+    margin-top: 3vh;
+    text-align: center !important;
+    margin-bottom: 60vh;
+  }
+  //shein link
+  .shein {
+    margin-left: 80vw;
+  }
+  h1 {
+    font-size: 6.5rem !important;
+  }
+  @media (max-width: 850px) {
+    h1 {
+      font-size: 3.25rem !important;
+    }
+  }
+}

@@ -1,0 +1,116 @@
+//main content
+main {
+  height: unset !important;
+
+  .wrap {
+    overflow: hidden;
+    cursor: default;
+  }
+}
+.row{
+  margin-left: 35vw;
+  margin-right: 35vw;
+}
+.space{
+  padding: 5px;
+}
+
+.bg {
+  height:100% !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+//pic mask
+.rgba-black-light, .rgba-black-light:after {
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 100%;
+}
+
+//fonts
+h1{
+  font-size: 6rem !important;
+}
+h2{
+  font-size: 3rem !important;
+}
+
+p{
+  color:white;
+}
+
+//background image resize
+@media (min-height: 956px)  and (min-width: 749px){
+  .bg {
+    height: 100vh !important;
+  }
+}
+@media (max-width: 1300px){
+  .row{
+    margin-left: 25vw;
+    margin-right: 25vw;
+
+  }
+}
+@media (max-width: 992px){
+  .row{
+    margin-left: 15vw;
+    margin-right: 15vw;
+
+  }
+}
+@media (max-width: 768px){
+  .row{
+    margin-left: 5vw;
+    margin-right: 5vw;
+
+  }
+}
+@media (max-width: 576px){
+  .row{
+    margin-left: 1vw;
+    margin-right: 1vw;
+
+  }
+  h1 {
+    font-size: 3.5rem !important;
+  }
+}
+//iphone 5
+@media (max-width: 320px) {
+  h1 {
+    font-size: 3rem !important;
+  }
+  h2 {
+    font-size: 2rem !important;
+
+  }
+  p{
+    font-size: .75rem;
+  }
+}
+//galaxy fold
+@media (max-width: 281px) {
+  h1 {
+    font-size: 2.5rem !important;
+  }
+  .row{
+    margin-left: 0;
+    margin-right: 0;
+
+  }
+  .pt-7{
+    padding-top: 2rem !important;
+
+  }
+  p{
+    font-size: .75rem;
+  }
+}
+@media (min-width: 1024px) {
+  .pt-7{
+    padding-top: 8rem !important;
+  }
+}
+

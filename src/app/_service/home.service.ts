@@ -8,7 +8,7 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 })
 export class HomeService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private messageService: MessageService) { }
 
   contactus(data: any): Observable<any> {
     return this.http.post('http://localhost:4200/', data);
@@ -21,14 +21,14 @@ export class HomeService {
       { 'headers': headers }).subscribe(
       response => {
         console.log(response);
-        // this.log('success', 'Email Successfully Sent');
+        this.log('success', 'Email Successfully Sent');
       }, error => {
         console.log({error});
       }
     );
   }
 
-  // private log(severity: string, details: string): void {
-  //   this.messageService.add(severity, 'IndyLL', details);
-  // }
+  private log(severity: string, details: string): void {
+    this.messageService.add(severity, 'IndyLL', details);
+  }
 }

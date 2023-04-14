@@ -1,0 +1,66 @@
+//main content
+main {
+  height: unset !important;
+
+  .wrap {
+    overflow: hidden;
+    cursor: default;
+  }
+}
+
+//bg pic
+.bg {
+  height:100vh !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.bl{
+  background-color: #9dbac1 ;
+}
+
+//font sizes
+h1{
+  font-size: 6rem !important;
+}
+h2{
+  font-size: 3rem !important;
+}
+p{
+  font-size: 1.25rem;
+}
+
+//padding
+.p-10{
+  padding: 2vw;
+}
+
+//pic mask
+.rgba-black-light, .rgba-black-light:after {
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 100%;
+}
+
+//media
+@media (max-width: 850px) {
+  h1 {
+    font-size: 3.5rem !important;
+  }
+  h2 {
+    font-size: 2.5rem !important;
+  }
+}
+//iphone 5
+@media (max-width: 320px) {
+  h1 {
+    font-size: 2.75rem !important;
+  }
+  h2 {
+    font-size: 2rem !important;
+  }
+}
+@media (min-width: 574px) {
+  .mt-5 {
+    margin-top: 0 !important;
+  }
+}

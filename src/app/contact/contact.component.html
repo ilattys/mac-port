@@ -1,0 +1,151 @@
+<header>
+  <input type='checkbox' id='toggle' class="toggle" style='display:none;'/>
+  <label class='toggle-btn toggle-btn__cross' for='toggle'>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </label>
+  <nav>
+    <ul class="menubar" >
+      <li>
+        <a routerLink="/home">Home</a>
+      </li>
+      <li>
+        <a routerLink="/portfolio">Portfolio</a>
+      </li>
+      <li>
+        <a routerLink="/about">About Me</a>
+      </li>
+      <li>
+        <a routerLink="/contact">Contact</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="wrap" >
+    <div class="bg" style="background-image: url('../../assets/img/contactBG.png');">
+      <div class="full-bg-img mask rgba-black-light">
+        <div class="title">
+          <h1 class="white-text wow fadeInDown">Mackenzie Miller</h1>
+        </div>
+        <div class="row d-flex align-items-center justify-content-center">
+          <div class="col-12 pt-7 pt-5">
+            <mdb-card class="wow fadeInUp">
+              <mdb-card-header class="bl text-center py-4" >
+                <h3>Contact Me</h3>
+                <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure
+                  provident
+                  voluptate esse quasi.</h6>
+              </mdb-card-header>
+              <mdb-card-body class="px-lg-5 pt-0">
+                <form class="form text-center" name="form" (ngSubmit)="f.form.valid ; f.resetForm()" #f="ngForm" novalidate>
+                  <!-- Name -->
+                  <div class="md-form mt-3">
+                    <input #name [(ngModel)]="model.name"
+                      type="text"
+                      id="name"
+                      class="form-control"
+                      name="name"
+                      mdbInput
+                    />
+                    <label for="name">Name</label>
+                  </div>
+                  <!-- Email/replyto -->
+                  <div class="md-form">
+                    <input #email [(ngModel)]="model.email"
+                      type="email"
+                      id="email"
+                      class="form-control"
+                      name="email"
+                      mdbInput
+                    />
+                    <label for="email">E-mail</label>
+                  </div>
+                  <!-- Subject -->
+                  <div class="md-form">
+                    <label for="subject">Service</label>
+                  </div>
+                  <div class="md-form">
+                    <div class="space"></div>
+                  </div>
+                  <div class="md-form">
+                    <select #subject [(ngModel)]="model.subject"
+                            class="form-control" name="subject" id="subject"
+                            placeholder="Choose Option"
+                            required type="text">
+                      <option *ngFor="let ser of services" [value]="ser">{{ser}}</option>
+                    </select>
+                  </div>
+                  <!-- Message -->
+                  <div class="md-form">
+                    <textarea #message [(ngModel)]="model.message"
+                      type="text"
+                      id="message"
+                      class="form-control md-textarea"
+                      name="message"
+                      mdbInput
+                    ></textarea>
+                    <label for="message">Message</label>
+                  </div>
+                  <!-- add to newsletter -->
+                  <mdb-checkbox [default]="true">Add me to your Newsletter!</mdb-checkbox>
+                  <!-- submit button -->
+                  <button
+                    mdbBtn
+                    color="info"
+                    outline="true"
+                    block="true"
+                    class="z-depth-0 my-4 waves-effect"
+                    mdbWavesEffect
+                    type="submit"
+                    (click)="onSubmit(subject.value, name.value, email.value, message.value);
+                          f.resetForm() ">Send
+                  </button>
+                </form>
+              </mdb-card-body>
+            </mdb-card>
+          </div>
+        </div>
+        <!-- Social media -->
+        <div class="row d-flex align-items-center justify-content-center" style="padding-top: 40px; padding-left: 0px; padding-right: 0px;">
+          <!--Twitter-->
+          <div class="col-4 wow fadeInUp text-center">
+            <mdb-icon fab icon="twitter-square" size="2x" style="color: white;"></mdb-icon>
+            <br>
+            <p>info@gmail.com</p>
+          </div>
+          <!--Insta-->
+          <div class="col-4 wow fadeInUp text-center">
+            <mdb-icon fab icon="instagram" size="2x" style="color: white;"></mdb-icon>
+            <br>
+            <p>info@gmail.com</p>
+          </div>
+          <!-- Facebook -->
+          <div class="col-4 wow fadeInUp text-center">
+            <mdb-icon fab icon="facebook" size="2x" style="color: white;" ></mdb-icon>
+            <br>
+            <p>info@gmail.com</p>
+          </div>
+        </div>
+    </div>
+    </div>
+  </div>
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

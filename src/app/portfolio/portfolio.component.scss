@@ -1,0 +1,62 @@
+//main content
+main {
+  height: unset !important;
+
+  .wrap {
+    overflow: hidden;
+    cursor: default;
+  }
+}
+.black{
+  height: 100%;
+  background-color: black;
+}
+.row {
+  margin-right: 1vw;
+  margin-left: 1vw;
+}
+.title{
+  padding-left: 1.5vw;
+}
+
+//font sizes
+h1{
+  font-size: 6rem !important;
+}
+h2{
+  font-size: 3rem !important;
+}
+
+//media
+@media (max-width: 850px) {
+  h1 {
+    font-size: 3.5rem !important;
+  }
+  h2 {
+    font-size: 2.5rem !important;
+  }
+}
+//iphone 5
+@media (max-width: 320px) {
+  h1 {
+    font-size: 2.75rem !important;
+  }
+  h2 {
+    font-size: 2rem !important;
+  }
+}
+//galaxy fold
+@media (max-width: 281px) {
+  h1 {
+    font-size: 2.5rem !important;
+  }
+  h2 {
+    font-size: 2rem !important;
+  }
+}
+//background image resize
+@media (min-height: 1050px)  and (min-width: 992px){
+  .black {
+    height: 100vh !important;
+  }
+}
