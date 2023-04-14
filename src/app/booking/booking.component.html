@@ -1,0 +1,122 @@
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-light fixed-top scrolling-navbar navbar-fixed-top" [containerInside]="false">
+  <mdb-navbar-brand>
+    <a class="logo navbar-brand waves-light" mdbWavesEffect href="#"><strong>MILLER</strong></a>
+  </mdb-navbar-brand>
+  <links>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item waves-light" mdbWavesEffect>
+        <a class="nav-link white-text" routerLink="/home">Home</a>
+      </li>
+      <li class="nav-item waves-light" mdbWavesEffect>
+        <a class="nav-link white-text" routerLink="/portfolio">Portfolio</a>
+      </li>
+      <li class="nav-item waves-light" mdbWavesEffect>
+        <a class="nav-link white-text" routerLink="/about">About Me</a>
+      </li>
+      <li class="nav-item waves-light" mdbWavesEffect>
+        <a class="nav-link white-text"  routerLink="/contact">Contact</a>
+      </li>
+      <li class="nav-item waves-light" mdbWavesEffect>
+        <a class="nav-link white-text" routerLink="/booking">Bookings</a>
+      </li>
+    </ul>
+  </links>
+</mdb-navbar>
+
+<header class="intro-header">
+  <div class="view jarallax bg" data-jarallax='{"speed": 0.2}' style="background-image: url('../../assets/img/bookingBG.jpg');">
+    <div class="full-bg-img mask rgba-black-light">
+      <div class="title">
+        <h1 class="white-text wow fadeInDown">Mackenzie Miller</h1>
+      </div>
+      <div class="container flex-center">
+        <div class="row d-flex align-items-center justify-content-center">
+          <div class="col-12 pt-5">
+            <mdb-card>
+              <mdb-card-header class="bl text-center py-4">
+                <h4>Contact Me</h4>
+                <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure
+                  provident
+                  voluptate esse quasi.</h6>
+              </mdb-card-header>
+              <mdb-card-body class="px-lg-5 pt-0">
+                <form class="text-center">
+                  <!-- Name -->
+                  <div class="md-form mt-3">
+                    <input
+                      type="text"
+                      formControlName="contactFormName"
+                      id="materialContactFormName"
+                      class="form-control"
+                      mdbInput
+                      mdbValidate
+                    />
+                    <label for="materialContactFormName">Name</label>
+                  </div>
+                  <!-- Email -->
+                  <div class="md-form">
+                    <input
+                      type="email"
+                      formControlName="contactFormEmail"
+                      id="materialContactFormEmail"
+                      class="form-control"
+                      mdbInput
+                      mdbValidate
+                    />
+                    <label for="materialContactFormEmail">E-mail</label>
+                  </div>
+                  <!-- Subject -->
+                  <div class="md-form">
+                    <label for="form1">Service</label>
+                  </div>
+                  <div class="md-form">
+                    <div class="space"></div>
+                  </div>
+                  <div class="md-form">
+                    <select #subject [(ngModel)]="model.subject"
+                            class="form-control" name="subject" id="form1"
+                            placeholder="Choose Option"
+                            required type="text">
+                      <option *ngFor="let ser of services" [value]="ser">{{ser}}</option>
+                    </select>
+                  </div>
+                  <!-- Message -->
+                  <div class="md-form">
+                    <textarea
+                      type="text"
+                      formControlName="contactFormMessage"
+                      id="materialContactFormMessage"
+                      class="form-control md-textarea"
+                      mdbInput
+                      mdbValidate
+                    ></textarea>
+                    <label for="materialContactFormMessage">Message</label>
+                  </div>
+                  <!-- add to newsletter -->
+                  <mdb-checkbox [default]="true">Add me to your Newsletter!</mdb-checkbox>
+                  <!-- submit button -->
+                  <button
+                    mdbBtn
+                    color="info"
+                    outline="true"
+                    rounded="true"
+                    block="true"
+                    class="z-depth-0 my-4 waves-effect"
+                    mdbWavesEffect
+                    type="submit"
+                    [disabled]="disabledSubmitButton"
+                  >
+                    Send
+                  </button>
+                </form>
+
+              </mdb-card-body>
+
+            </mdb-card>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
